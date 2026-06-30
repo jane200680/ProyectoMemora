@@ -1,0 +1,84 @@
+openapi: 3.1.0
+
+info:
+  title: MEMORA API
+  version: 1.0.0
+  description: API para la plataforma MEMORA de preservación del patrimonio cultural del cantón Catamayo.
+
+servers:
+  - url: http://localhost:3000
+    description: Servidor local
+
+paths:
+
+  /api/register:
+    post:
+      summary: Registrar un nuevo usuario
+      tags:
+        - Autenticación
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre_usuario:
+                  type: string
+                nombre:
+                  type: string
+                apellido:
+                  type: string
+                correo:
+                  type: string
+                contrasena:
+                  type: string
+
+      responses:
+        '201':
+          description: Usuario registrado correctamente
+
+        '400':
+          description: Campos obligatorios incompletos
+
+        '409':
+          description: Usuario o correo ya registrado
+
+        '500':
+          description: Error interno del servidor
+
+
+  /api/login:
+    post:
+      summary: Iniciar sesión
+      tags:
+        - Autenticación
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+
+            schema:
+              type: object
+
+              properties:
+
+                correo:
+                  type: string
+
+                contrasena:
+                  type: string
+
+      responses:
+
+        '200':
+          description: Inicio de sesión exitoso
+
+        '401':
+          description: Credenciales incorrectas
+
+        '500':
+          description: Error interno del servidor
