@@ -92,11 +92,11 @@ Campos requeridos
 
 ```json
 {
-  "nombre_usuario": "juan01",
-  "nombre": "Juan",
-  "apellido": "Pérez",
-  "correo": "juan@gmail.com",
-  "contrasena": "123456"
+  "nombre_usuario": "janeee_mc",
+  "nombre": "Janneth",
+  "apellido": "Medina",
+  "correo": "jannethmedina144@gmail.com",
+  "contrasena": "12345"
 }
 ```
 
@@ -110,8 +110,8 @@ POST /api/login
 
 ```json
 {
-  "correo": "juan@gmail.com",
-  "contrasena": "123456"
+  "correo": "jannethmedina144@gmail.com",
+  "contrasena": "12345"
 }
 ```
 
